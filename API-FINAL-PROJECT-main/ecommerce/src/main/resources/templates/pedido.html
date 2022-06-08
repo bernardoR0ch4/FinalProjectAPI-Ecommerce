@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:remove="all">Novo Pedido</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <style>
+            * {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Novo Pedido Cadastrado | ID: <span th:text="${idPedido}"></span></h1>
+        <hr>
+        <ul>
+            <li>
+                <b>Data do Pedido:</b> <span th:text="${dataPedido}"></span>
+            </li>
+
+            <li>
+                <b>Data de Envio prevista:</b> <span th:text="${dataEnvio}"></span>
+            </li>
+
+            <li>
+                <b>Data de Entrega prevista:</b> <span th:text="${dataEntrega}"></span>
+            </li>
+
+            <li>
+                <b>ID do Cliente:</b> <span th:text="${idCliente}"></span>
+            </li>
+
+            <li>
+                <b>Nome do Cliente:</b> <span th:text="${clienteNome}"></span>
+            </li>
+
+            <li>
+                <b>Valor total do pedido: R$</b><span th:text="${valorTotal}"></span>
+            </li>
+
+            <li>
+                <b>Endereço de Entrega:</b> <span th:text="${endereco}"></span>
+                <ul>
+                    <li>
+                        <b>UF:</b> <span th:text="${uf}"></span>
+                    </li>
+                    <li>
+                        <b>Cidade:</b> <span th:text="${cidade}"></span>
+                    </li>
+                    <li>
+                        <b>Bairro:</b> <span th:text="${bairro}"></span>
+                    </li>
+                    <li>
+                        <b>Rua:</b> <span th:text="${rua}"></span>
+                    </li>
+                    <li>
+                        <b>Número:</b> <span th:text="${numero}"></span>
+                    </li>
+                    <li>
+                        <b>Complemento:</b> <span th:text="${complemento}"></span>
+                    </li>
+                </ul>
+            </li>
+            
+            <li>
+                <b>Lista de IDs dos Itens pedidos:</b> <span th:text="${listaDeItems}"></span>
+            </li>
+        </ul>
+    </body>
+</html>
